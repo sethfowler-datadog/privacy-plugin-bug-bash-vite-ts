@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
-      - run: npm install
+      - run: npm install --force
       - name: Build app with GitHub Pages base
         run: npm run build -- --base /${{ github.event.repository.name }}
       - name: Configure Pages (if this fails, set Pages source to GitHub Actions in repo settings)
